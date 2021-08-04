@@ -1,0 +1,802 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+header {
+    z-index: 1000;
+    position: fixed;
+    top: 0px;
+    margin-left: 0;
+    width: 100%;
+    left: 0;
+    transition: all .3 ease-in-out;
+}
+
+#video-logo-background {
+    float: left;
+}
+
+#video-logo-background img {
+    position: relative;
+    top: -2px;
+    left: 4px;
+    width: 120px;
+    text-align: center;
+    margin: 0px 0px 0px 0px;
+}
+
+header#videohead-pro {
+    height: 10%;
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    z-index: 110;
+    background: #ffffff;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#video-search-header {
+    float: left;
+    height: 89px;
+    width: 40%;
+    line-height: 89px;
+    position: relative;
+}
+
+#video-search-header input {
+    position: absolute;
+    font-size: 25px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #444444;
+    height: 80%;
+    top: 10%;
+    left: 2%;
+    background: none;
+    border: none;
+    width: 100%;
+    outline: none;
+}
+
+#header-user-profile {
+    float: right;
+    position: relative;
+}
+
+#header-user-profile-click {
+    cursor: pointer;
+    color: #888888;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    padding: 25px 40px 25px 20px;
+}
+
+#header-user-profile img {
+    width: 40px;
+    border-radius: 50px;
+    margin-right: 6px;
+}
+
+#header-user-profile.active #header-user-profile-click,
+#header-user-profile-click:hover {
+    color: #666666;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+#header-user-profile #header-username {
+    display: inline-block;
+}
+
+#header-user-profile i {
+    margin-left: 6px;
+}
+
+#header-user-profile-menu ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    visibility: hidden;
+}
+
+#header-user-profile-menu ul li {
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+
+#header-user-profile-menu ul li a {
+    display: block;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 300;
+    color: #888888;
+    padding: 10px 20px;
+    font-size: 13px;
+}
+
+.dashboard {
+    position: absolute;
+    width: 95%;
+    height: 10%;
+    left: 2.5%;
+    top: 10%;
+    transition: all .3 ease-in-out;
+}
+
+.dashboard>button.addclient,
+.dashboard>button.addpresta,
+.dashboard>button.addfacture,
+.dashboard>button.adddevis,
+.dashboard>input.siret {
+    position: absolute;
+    height: 60%;
+    width: 18.8%;
+    top: 20%;
+    font-size: 20px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+}
+
+.dashboard>button.addclient:active,
+.dashboard>button.addpresta:active,
+.dashboard>button.addfacture:active,
+.dashboard>button.adddevis:active,
+.dashboard>input.siret:active {
+    outline: none;
+    border: none;
+}
+
+.dashboard>button.addclient {
+    left: 1%;
+    background-color: rgb(56, 90, 202);
+    color: white;
+}
+
+.dashboard>button.addfacture {
+    left: 60.4%;
+    background-color: tomato;
+    color: white;
+}
+
+.dashboard>button.adddevis {
+    left: 40.6%;
+    background-color: orange;
+    color: white;
+}
+
+.dashboard>button.addpresta {
+    left: 20.8%;
+    background-color: rgb(37, 201, 37);
+    color: white;
+}
+
+.dashboard>input.siret {
+    left: 80.2%;
+    color: white;
+    background-color: black;
+    cursor: text;
+}
+
+.dashboard>input.siret::placeholder {
+    color: #d4d3d3;
+}
+
+.client {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    position: absolute;
+    width: 70%;
+    height: 80%;
+    bottom: 0;
+    left: 2.5%;
+    transition: all .3 ease-in-out;
+}
+
+
+/* USER LIST TABLE */
+
+.user-list tbody td>img {
+    position: relative;
+    max-width: 50px;
+    float: left;
+    margin-right: 15px;
+}
+
+.user-list tbody td .user-link {
+    display: block;
+    font-size: 1.25em;
+    padding-top: 5px;
+}
+
+.user-list tbody td .user-subhead {
+    font-size: 0.875em;
+    font-style: italic;
+}
+
+
+/* TABLES */
+
+.table {
+    border-collapse: separate;
+}
+
+.table-hover>tbody>tr:hover>td,
+.table-hover>tbody>tr:hover>th {
+    background-color: #eee;
+}
+
+.table thead>tr>th {
+    border-bottom: 1px solid #C2C2C2;
+    padding-bottom: 0;
+}
+
+.table tbody>tr>td {
+    font-size: 20px;
+    background: transparent;
+    border-top: 10px solid #fff;
+    vertical-align: middle;
+    padding: 12px 8px;
+}
+
+.table tbody>tr>td:first-child,
+.table thead>tr>th:first-child {
+    padding-left: 20px;
+}
+
+.table thead>tr>th span {
+    border-bottom: 2px solid #C2C2C2;
+    display: inline-block;
+    padding: 0 5px;
+    padding-bottom: 5px;
+    font-weight: normal;
+    font-size: 25px;
+}
+
+.table thead>tr>th>a span {
+    color: #344644;
+}
+
+.table thead>tr>th>a span:after {
+    content: "\f0dc";
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: inherit;
+    margin-left: 5px;
+    font-size: 0.75em;
+}
+
+.table thead>tr>th>a.asc span:after {
+    content: "\f0dd";
+}
+
+.table thead>tr>th>a.desc span:after {
+    content: "\f0de";
+}
+
+.table thead>tr>th>a:hover span {
+    text-decoration: none;
+    color: #2bb6a3;
+    border-color: #2bb6a3;
+}
+
+.table.table-hover tbody>tr>td {
+    -webkit-transition: background-color 0.15s ease-in-out 0s;
+    transition: background-color 0.15s ease-in-out 0s;
+}
+
+.table tbody tr td .call-type {
+    display: block;
+    font-size: 0.75em;
+    text-align: center;
+}
+
+.table tbody tr {
+    cursor: pointer;
+    background-color: #f5f5f5;
+}
+
+.table tbody tr:hover {
+    background-color: #eee;
+}
+
+.table tbody tr td .first-line {
+    line-height: 1.5;
+    font-weight: 400;
+    font-size: 1.125em;
+}
+
+.table tbody tr td .first-line span {
+    font-size: 0.875em;
+    color: #969696;
+    font-weight: 300;
+}
+
+.table tbody tr td .second-line {
+    font-size: 0.875em;
+    line-height: 1.2;
+}
+
+.table a.table-link {
+    margin: 0 5px;
+    font-size: 1.125em;
+}
+
+.table a.table-link:hover {
+    text-decoration: none;
+    color: #2aa493;
+}
+
+.table a.table-link.danger {
+    color: #fe635f;
+}
+
+.table a.table-link.danger:hover {
+    color: #dd504c;
+}
+
+.table tbody>tr.table-line-fb>td {
+    background-color: #9daccb;
+    color: #262525;
+}
+
+.table tbody>tr.table-line-twitter>td {
+    background-color: #9fccff;
+    color: #262525;
+}
+
+.table tbody>tr.table-line-plus>td {
+    background-color: #eea59c;
+    color: #262525;
+}
+
+.table-stats .status-social-icon {
+    font-size: 1.9em;
+    vertical-align: bottom;
+}
+
+.table-stats .table-line-fb .status-social-icon {
+    color: #556484;
+}
+
+.table-stats .table-line-twitter .status-social-icon {
+    color: #5885b8;
+}
+
+.table-stats .table-line-plus .status-social-icon {
+    color: #a75d54;
+}
+
+.addclientpart,
+.addprestapart {
+    display: none;
+    position: absolute;
+    height: 90%;
+    width: 100%;
+    top: 10%;
+    left: 0;
+    z-index: 1000;
+    transition: all .3 ease-in-out;
+}
+
+.clientpart,
+.dashboard {
+    transition: all .3 ease-in-out;
+}
+
+h1.title-form {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 50px;
+}
+
+ul.items {
+    position: absolute;
+    width: 30px;
+    height: auto;
+    top: 32%;
+    left: 30%;
+}
+
+ul.items li {
+    list-style-type: none;
+    width: 13px;
+    height: 13px;
+    margin: 10px 0;
+    background: green;
+    border-radius: 50%;
+    opacity: 0.4;
+    cursor: pointer;
+}
+
+ul.items li.active {
+    opacity: 1;
+}
+
+form {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+form fieldset {
+    position: absolute;
+    width: 30%;
+    height: 5%;
+    background: white;
+    border-radius: 10px;
+    opacity: 0;
+    left: 35%;
+    top: 40%;
+    transform: scale(0.2);
+    transition: all 0.4s ease-in-out;
+}
+
+form fieldset input,
+form fieldset p {
+    display: inline-block;
+    width: 100%;
+    margin-left: 50px;
+    color: #333333;
+    font-size: 23px;
+    letter-spacing: 1px;
+}
+
+form fieldset p {
+    margin-top: 22px;
+    text-align: center;
+}
+
+form fieldset input {
+    height: 100%;
+    width: 85%;
+    margin-top: 0px;
+    border: none;
+    outline: none;
+}
+
+form fieldset .icon {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 15px;
+    transition: all 0.4s ease;
+}
+
+form fieldset .icon i {
+    position: absolute;
+    display: block;
+}
+
+form fieldset .icon i::before,
+form fieldset .icon i::after {
+    position: absolute;
+    content: "";
+}
+
+form fieldset .icon.left {
+    left: 10px;
+}
+
+form fieldset .icon.right {
+    right: 10px;
+    cursor: pointer;
+}
+
+form fieldset .icon.button:hover {
+    background: #f2f2f2;
+    border-radius: 5px;
+    transition: all 0.4s ease;
+}
+
+form fieldset.enable {
+    z-index: 1;
+    opacity: 1;
+    transition: all 0.5s ease-out 0.2s;
+    transform: scale(1);
+    animation: enable 0.5s ease-out 0.2s;
+}
+
+form fieldset.disable {
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    transform: translateY(120px) scale(0.9);
+}
+
+body.error fieldset {
+    transform-origin: 50% 100%;
+    animation: error 0.3s ease-out;
+}
+
+@keyframes enable {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    60% {
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes error {
+    0%,
+    50%,
+    100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(-3deg);
+    }
+    75% {
+        transform: rotate(3deg);
+    }
+}
+
+
+/**
+   * * Icons in CSS, long as f****
+   * */
+
+.icon .arrow {
+    width: 2px;
+    height: 17px;
+    top: 5px;
+    left: 14px;
+    background: #333333;
+}
+
+.icon .arrow::before {
+    width: 6px;
+    height: 6px;
+    bottom: -1px;
+    left: -3px;
+    border-color: #333333;
+    border-right: 2px solid;
+    border-bottom: 2px solid;
+    transform: rotate(45deg);
+}
+
+.icon .user {
+    width: 20px;
+    height: 10px;
+    bottom: 5px;
+    left: 5px;
+    box-shadow: 0 0 0 2px #333333 inset;
+    border-radius: 6px 6px 3px 3px;
+}
+
+.icon .user::before {
+    width: 10px;
+    height: 10px;
+    top: -9px;
+    left: 5px;
+    box-shadow: 0 0 0 2px #333333 inset;
+    border-radius: 50%;
+}
+
+.icon .letter {
+    width: 20px;
+    height: 12px;
+    top: 9px;
+    left: 5px;
+    box-shadow: 0 0 0 2px #333333 inset;
+    border-radius: 3px;
+}
+
+.icon .letter::before,
+.icon .letter::after {
+    width: 11px;
+    height: 2px;
+    top: 4px;
+    background: #333333;
+}
+
+.icon .letter::before {
+    left: 0;
+    transform: rotate(30deg);
+}
+
+.icon .letter::after {
+    right: 0;
+    transform: rotate(-30deg);
+}
+
+.icon .lock {
+    width: 20px;
+    height: 16px;
+    top: 9px;
+    left: 5px;
+    box-shadow: 0 0 0 2px #333333 inset;
+    border-radius: 3px;
+}
+
+.icon .lock::before {
+    width: 8px;
+    height: 8px;
+    top: -4px;
+    left: 4px;
+    border: 2px solid transparent;
+    border-top: 2px solid #333333;
+    border-right: 2px solid #333333;
+    border-radius: 50%;
+    transform: rotate(-45deg);
+}
+
+.icon .lock::after {
+    width: 6px;
+    height: 7px;
+    top: 4px;
+    left: 7px;
+    box-shadow: 0 0 0 2px #333333 inset;
+}
+
+p.warning {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    top: 48%;
+    color: red;
+    opacity: 0;
+    transition: all .3s ease-in-out;
+}
+
+.editable {
+    outline: none;
+    cursor: text;
+    background-color: rgba(102, 172, 236, .102)
+}
+
+.editable:focus,
+.editable:hover {
+    background-color: rgba(102, 172, 236, .227)!important
+}
+
+[contenteditable=true]:empty {
+    color: #bbb
+}
+
+[contenteditable=true]:empty:before {
+    content: attr(placeholder)
+}
+
+@keyframes click-wave {
+    0% {
+        height: 40px;
+        width: 40px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 200px;
+        width: 200px;
+        margin-left: -80px;
+        margin-top: -80px;
+        opacity: 0;
+    }
+}
+
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    position: relative;
+    top: 13.33333px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 40px;
+    width: 40px;
+    transition: all 0.15s ease-out 0s;
+    background: #cbd1d8;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin-right: 0.5rem;
+    outline: none;
+    position: relative;
+    z-index: 1000;
+}
+
+.option-input:hover {
+    background: #9faab7;
+}
+
+.option-input:checked {
+    background: #40e0d0;
+}
+
+.option-input:checked::before {
+    height: 40px;
+    width: 40px;
+    position: absolute;
+    content: '✔';
+    display: inline-block;
+    font-size: 26.66667px;
+    text-align: center;
+    line-height: 40px;
+}
+
+.option-input:checked::after {
+    -webkit-animation: click-wave 0.65s;
+    -moz-animation: click-wave 0.65s;
+    animation: click-wave 0.65s;
+    background: #40e0d0;
+    content: '';
+    display: block;
+    position: relative;
+    z-index: 100;
+}
+
+.checkbox {
+    outline: none !important;
+}
+
+.checkboxtva {
+    position: absolute;
+    right: 300px;
+}
+
+.form-select {
+    width: 90%;
+    margin-left: 0;
+    height: 100%;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+    text-align-last: center;
+    margin: 3px;
+}
+
+.form-select2 {
+    width: 90%;
+    margin-left: 5%;
+    height: 10%;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    background-color: white;
+    text-align: center;
+    text-align-last: center;
+}
+
+.form-select>option,
+.form-select2>option {
+    background-color: white;
+}
+
+.cotisation {
+    position: absolute;
+    right: 1%;
+    height: 41%;
+    top: 20%;
+    width: 26%;
+    border-radius: 10px;
+    border: solid #e7e6e6 3px;
+}
+
+.cot th {
+    font-size: 19px;
+}
