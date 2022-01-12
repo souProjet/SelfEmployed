@@ -1,4 +1,4 @@
-import { Client } from "https://deno.land/x/mysql/mod.ts";
+import { Client } from "https://deno.land/x/mysql@v2.10.2/mod.ts";
 
 //On importe les conf
 const config = JSON.parse(Deno.readTextFileSync("./class/config.json"));

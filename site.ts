@@ -3,7 +3,7 @@ import { login_func } from "./class/modif/login.ts";
 import { devis_func } from "./class/modif/devis.ts";
 import { facture_func } from "./class/modif/facture.ts";
 
-import { getCookies } from "https://deno.land/std/http/cookie.ts";
+import { getCookies } from "https://deno.land/std@0.104.0/http/cookie.ts";
 var statique = ["asset"];
 
 const home = new home_func();

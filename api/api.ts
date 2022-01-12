@@ -17,7 +17,7 @@ import { editclient } from "./editclient.ts";
 import { tvastate } from "./tvastate.ts";
 import { getcot } from "./getcot.ts";
 
-import { getCookies } from "https://deno.land/std/http/cookie.ts";
+import { getCookies } from "https://deno.land/std@0.104.0/http/cookie.ts";
 
 export class api {
   async traitement(req: any) {
