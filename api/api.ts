@@ -127,9 +127,8 @@ export class api {
     req.respond(return_data);
   }
   public async addfacture_func(req: any, token: String) {
-    var data: any = [];
-    const body = new TextDecoder("utf-8").decode(await Deno.readAll(req.body));
-
+    var data: any = {};
+    let body = new TextDecoder("utf-8").decode(await Deno.readAll(req.body));
     body.split("&").forEach((arg) => {
       data[arg.split("=")[0]] = arg.split("=")[1];
     });

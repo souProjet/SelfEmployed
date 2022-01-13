@@ -373,7 +373,7 @@ function dlpdf(iddevis, element) {
     var opt = {
         margin: 5,
     };
-    $.post("http://localhost:8003/api/getdevis", {
+    $.post("http://localhost:8003/api/getdevis/", {
         iddevis: iddevis
     }, function(data) {
         if (data.body.length !== 0) {
@@ -400,7 +400,7 @@ function dlpdffacture(idfacture) {
     var opt = {
         margin: 5,
     };
-    $.post("http://localhost:8003/api/getfacture", {
+    $.post("http://localhost:8003/api/getfacture/", {
         idfacture: idfacture
     }, function(data) {
         if (data.body.length !== 0) {
@@ -450,7 +450,7 @@ function print(idfacture) {
     var opt = {
         margin: 5,
     };
-    $.post("http://localhost:8003/api/getfacture", {
+    $.post("http://localhost:8003/api/getfacture/", {
         idfacture: idfacture
     }, function(data) {
         if (data.body.length !== 0) {
@@ -472,7 +472,7 @@ function print(idfacture) {
 }
 
 function generatefacture(iddevis) {
-    $.post("http://localhost:8003/api/getdevis", {
+    $.post("http://localhost:8003/api/getdevis/", {
         iddevis: iddevis
     }, function(data) {
         if (data.body.length !== 0) {
@@ -592,7 +592,7 @@ month = month.getMonth() + 1;
 document.querySelector('option[value="' + month + '"').setAttribute("selected", "selected");
 
 monthSelectCot.addEventListener('change', function(e) {
-    $.post("http://localhost:8003/api/getcot", {
+    $.post("http://localhost:8003/api/getcot/", {
         query: e.target.value
     }, function(data) {
         document.querySelector('.turnoverpresta').innerText = data.body["presta"][0] + "€";

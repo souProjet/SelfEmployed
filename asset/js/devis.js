@@ -13,7 +13,7 @@ prestalistblock.style.display = "none";
 
 if (!!selectclientbutton) {
     selectclientbutton.addEventListener('click', function() {
-        $.post("http://localhost:8003/api/getclient", {}, function(data) {
+        $.post("http://localhost:8003/api/getclient/", {}, function(data) {
             function zip(zipcode) {
                 zipcode = zipcode.toString();
 
@@ -85,7 +85,7 @@ function applyclient(client) {
 }
 
 addprestabutton.addEventListener('click', function() {
-    $.post("http://localhost:8003/api/getpresta", {}, function(data) {
+    $.post("http://localhost:8003/api/getpresta/", {}, function(data) {
         if (data) {
             document.querySelector('tbody.prestaoption').innerHTML = "";
             for (var a = 0; a < data.body.length; a++) {

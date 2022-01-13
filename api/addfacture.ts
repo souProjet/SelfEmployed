@@ -35,6 +35,7 @@ export async function addfacture(data: Object, token: String) {
     " ",
   );
   var idfacture = decodeURIComponent(data["idfacture"]);
+ 
   var date = escapeHtml(decodeURIComponent(data["date"]));
 
   if (name !== "" && client_token !== "" && html !== "" && date !== "") {
@@ -43,7 +44,7 @@ export async function addfacture(data: Object, token: String) {
     );
     private_key = private_key[0]["private_key"];
    
-    if (idfacture) {
+    if (idfacture != "undefined") {
       await database_execute.query_update(
         "UPDATE facture SET html = '" + html + "', name = '" + name +
           "' , date = '" + date + "' WHERE user_key = '" + private_key +
